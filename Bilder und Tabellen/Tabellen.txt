@@ -1,0 +1,57 @@
+
+
+
+
+
+
+
+
+
+############################################
+
+
+Hier eine kurze Tabelle mit Faktoren, die neben IPv6 in einer VM oder generell zu IP-Leaks führen können:
+
+
+| Faktor                           | Beschreibung                                        | Leak-Risiko     |
+| -------------------------------- | --------------------------------------------------- | --------------- |
+| **WebRTC im Browser**            | Browser gibt IPs direkt über WebRTC preis           | Hoch            |
+| **IPv6 aktiviert**               | Öffentliche IPv6-Adresse wird sichtbar              | Hoch            |
+| **VPN falsch konfiguriert**      | VPN lässt IP-Daten direkt oder über DNS durch       | Hoch            |
+| **DNS-Leaks**                    | DNS-Anfragen gehen außerhalb des VPNs               | Mittel bis Hoch |
+| **Browser-Plugins/Add-ons**      | Plugins können IP oder Standort preisgeben          | Mittel          |
+| **Proxy-Fehler**                 | Proxy leitet nicht alle Verbindungen richtig weiter | Mittel          |
+| **Nicht geschützte Apps**        | Apps außerhalb des VPNs nutzen eigene IP            | Mittel          |
+| **IPv4 NAT fehlt**               | Keine NAT, echte IPv4-Adresse sichtbar              | Hoch            |
+| **Tor-Konfiguration fehlerhaft** | Tor gibt IP versehentlich preis                     | Hoch            |
+
+
+
+############################################
+
+
+Hier die erweiterte Tabelle mit weiteren Faktoren, die zu IP-Leaks führen können, inklusive kurzer Erklärung:
+
+
+| Faktor                                               | Beschreibung                                                                               | Leak-Risiko        |
+| ---------------------------------------------------- | ------------------------------------------------------------------------------------------ | ------------------ |
+| **WebRTC im Browser**                                | WebRTC kann lokale, private und öffentliche IPs direkt an Webseiten übermitteln            | Hoch               |
+| **IPv6 aktiviert**                                   | Öffentliche IPv6-Adresse wird sichtbar, oft ohne NAT, daher einfacher Rückschluss möglich  | Hoch               |
+| **VPN falsch konfiguriert**                          | VPN tunnelt nicht alle Verbindungen, z. B. Split-Tunneling oder DNS-Anfragen außerhalb VPN | Hoch               |
+| **DNS-Leaks**                                        | DNS-Abfragen werden nicht über VPN, sondern direkt an ISP-Server geschickt                 | Mittel bis Hoch    |
+| **Browser-Plugins/Add-ons**                          | Manche Plugins können IP oder Standort via Tracking weitergeben                            | Mittel             |
+| **Proxy-Fehler**                                     | Proxy leitet nicht alle Protokolle oder IP-Versionen korrekt weiter                        | Mittel             |
+| **Nicht geschützte Apps**                            | Anwendungen nutzen eigene Netzwerkverbindung außerhalb VPN oder Proxys                     | Mittel             |
+| **IPv4 NAT fehlt**                                   | Wenn keine NAT vorhanden ist, wird echte öffentliche IPv4-Adresse sichtbar                 | Hoch               |
+| **Tor-Konfiguration fehlerhaft**                     | Falsche Einstellungen können IP an Webseiten oder andere Dienste preisgeben                | Hoch               |
+| **Browser-Fingerprinting**                           | IP wird oft nicht direkt geleakt, aber andere Daten können IP indirekt verraten            | Niedrig bis Mittel |
+| **Mitgelieferte Metadaten**                          | Dateien oder Bilder können IP/Standort im Metadatenfeld enthalten                          | Mittel             |
+| **Mitgelieferte Plugins oder Software (z.B. Flash)** | Können IP-Adressen oder Standort trotz VPN/WebRTC-Schutz preisgeben                        | Mittel             |
+| **System-DNS-Konfiguration**                         | DNS über Betriebssystem kann Abfragen ohne VPN weiterleiten                                | Mittel             |
+| **IPv6 Transitionstechniken (z.B. Teredo, 6to4)**    | Können IP über Tunnelprotokolle trotz VPN sichtbar machen                                  | Mittel bis Hoch    |
+
+
+############################################
+############################################
+############################################
+############################################

@@ -1,0 +1,68 @@
+
+
+
+
+
+WebRTC | VPN & DNS-Leak 
+WebRTC | VPN & IPv6
+
+Warum ist das so? Teredo
+
+
+
+
+######################################
+######################################  WebRTC, VPN & DNS-Leak 
+
+Auch wenn du ein VPN oder Proxy verwendest,  
+WebRTC kann DNS-Anfragen (einschließlich für IPv6-Adressen) senden, und deine IP-Adresse preisgegeben.
+
+Vermeidung: 
+DNS-Abfragen über VPN leiten (DNS-Server des VPN-Anbieters verwenden); 
+oder DNS-Leak-Schutz aktivieren.
+
+Prüfen mit der TestWebseite: dnsleaktest.com
+
+Wenn die  IPv4-[DNS-Server] Adressen von den des VPN-Anbieters abweichen, 
+führen nicht alle DNS-Anfragen über den VPN. 
+DNS-Anfragen werden an den Provider ... geleitet, der deine Browsing-Aktivitäten einsehen kann. 
+
+
+######################################
+######################################  WebRTC, VPN & IPv6
+
+Einige VPNs schützen nur IPv4,
+wenn eine IPv6-Adresse hast, kann diese auslaufen.
+
+Vermeidung: 
+In VPN Einstellungen <IPv6 Leak Protection> oder <IPv6-Schutzoption> aktivieren.
+Meisten VPNs haben weder IPv6-Unterstützung noch die Option zum Blockieren, 
+dh. deaktiviere IPv6 in deinen Netzwerkeinstellungen (& verwende stattdessen IPv4).
+
+Wenn vom Provider nur eine IPv4-Adresse zugewiesen wurde (und Sie keine IPv6-Adresse haben), 
+müssen Sie sich keine Gedanken über IPv6-Lecks machen.
+
+
+######################################
+######################################  Warum ist das so? Teredo
+
+Teredo ist eine integrierte Windows-Funktion, mit der IPv4 und IPv6 koexistieren können, 
+indem IPv6-Adressen auf IPv4-Verbindungen übertragen und verstanden werden können.
+Teredo kann jedoch Vorrang vor dem verschlüsselten Tunnel Ihres VPN haben, was zu einem DNS-Leck führt.
+
+So deaktivieren Sie Teredo auf Windows-Geräten:
+Eingabeaufforderung: netsh interface teredo set state disabled
+Führe DNS-Lecktest erneut aus.
+
+
+Bei deaktivieren von Teredo können gelegentlich Probleme mit bestimmten Websites oder Servern auftreten. 
+Für VPN-Benutzer ist dies jedoch eine viel sicherere Wahl.
+
+
+
+######################################
+######################################
+
+
+
+

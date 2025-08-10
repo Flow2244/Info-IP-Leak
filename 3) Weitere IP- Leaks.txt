@@ -1,0 +1,158 @@
+
+
+
+DNS-Leak
+WebRTC-Leak
+IPv6-Leak
+
+Proxy-Leaks
+Application-Level-Leaks
+HTTP-Referrer-Leak
+Cookies oder Tracking-Methoden
+Flash oder andere Plugins
+TOR und VPN-Kombination
+WebRTC in anderen Anwendungen
+Malware und Tracking-Software
+QoS (Quality of Service) & Deep Packet Inspection (DPI)
+
+
+
+#################---------------------------------------#################
+#################---------------------------------------#################
+#################---------------------------------------#################  
+
+
+
+#######################################################  WebRTC-Leak (InfoBlatt 1 & 2)
+
+WebRTC kann die IP-Adresse preisgeben, auch wenn ein VPN aktiv ist.
+Vermeidung: 
+WebRTC im Browser deaktivieren oder einen WebRTC-Leak-Schutz im VPN aktivieren.
+
+
+#######################################################  DNS-Leak 
+
+Nicht alle DNS-Anfragen werden über den VPN-Server geleitet, sondern an den Provider geschickt.
+
+Vermeidung: 
+DNS-Server von VPN-Anbieter verwenden oder schauen dass das VPN ein DNS-Leak-Schutz hat.
+
+
+#######################################################  IPv6-Leak 
+
+IPv6-Adresse wird über das Web gesendet, auch wenn mit VPN verbunden bist.
+
+Vermeidung: 
+Deaktiviere IPv6 in deinem Betriebssystem oder VPN-Client, falls dein VPN dies nicht korrekt tunnelt.
+
+
+
+#################---------------------------------------#################
+#################---------------------------------------#################
+#################---------------------------------------#################  
+
+
+
+#######################################################  Proxy-Leaks
+
+Falls du zusätzlich zum VPN einen Proxy verwendest, kann der Proxy-Verkehr unverschlüsselt über deinen ISP laufen, wenn der VPN nicht korrekt konfiguriert ist, und somit deine IP-Adresse und Aktivitäten preisgeben.
+
+Vermeidung: 
+VPN-Proxy-Verkehr korrekt konfigurieren, oder nur den VPN und keinen zusätzlichen Proxy verwenden.
+
+
+#######################################################  Application-Level-Leaks
+
+Einige Anwendungen oder Browser-Plugins können unabhängig vom VPN deine echte IP-Adresse übertragen, z.B. durch Websockets, HTTP-Requests oder Third-Party-Tracking.
+
+Vermeidung: 
+Achte darauf, dass alle Anwendungen, die du verwendest, ebenfalls über das VPN laufen. Verwende Webbrowser, die strikte Privatsphäre-Optionen bieten, wie Firefox oder Brave.
+
+
+#################---------------------------------------#################
+#################---------------------------------------#################
+#################---------------------------------------#################  
+
+
+#######################################################  HTTP-Referrer-Leak
+
+Wenn du von einer Website zu einer anderen navigierst, kann der HTTP-Referrer die URL der vorherigen Seite übermitteln. 
+Der Referrer kann die URL der Seite enthalten, auf der du dich z.B. mit deinem echten Account angemeldet hast (z.B. bei einer Login-Seite).
+
+Vermeidung: 
+Den Referrer-Header blockieren oder ein Browser-Plugin verwenden, um den Referrer zu anonymisieren.
+
+
+#######################################################  Cookies oder Tracking-Methoden
+
+IP-Leak durch Cookies
+Wenn du erster ohne VPN auf der Webseite warst, könnte der Cookie diese IP-Adresse oder eine ID enthalten und später übermitteln, wenn du dieselbe Webseite erneut besuchst.
+Cookies könnten deine alte IP-Adresse speichern und an die Webseite übermitteln. Diese Informationen können zur Verknüpfung deiner Aktivitäten von gestern und heute oder zu Identifizierung führen.
+
++++++++++++++++++++
+
+Tracking-Methoden wie Fingerprinting können genaue Infos über den Browser, PC und Geräteinstellungen sammeln, um dich auch dann zu identifizieren, wenn Cookies gelöscht oder blockiert wurden.
+
+Vermeidung: 
+Cookies regelmäßig löschen oder benutze einen privaten Modus/Inkognito-Modus.
+
+
+#######################################################  Flash oder andere Plugins
+
+Flash und andere veraltete Plugins (z.B. Java, Silverlight) haben in der Vergangenheit oft IP-Leaks verursacht, da sie oft direkt auf Netzwerkprotokolle zugreifen konnten, die nicht durch den VPN-Tunnel gingen.
+
+Vermeidung: 
+Deaktiviere Flash, Java und ähnliche Plugins oder stelle sicher, dass du moderne Browserfunktionen verwendest, die diese Technologien nicht unterstützen.
+
+In den letzten Jahren wurde Flash fast vollständig durch das weitaus sicherere HTML5 ersetzt. 
+(seit 2020 offiziell nicht mehr unterstützt)
+
+
+#######################################################  TOR und VPN-Kombination
+
+VPN-Client muss aktiv bleiben und keine Verbindung ohne VPN möglich sein (z.B. Kill Switch Funktion).
+Teste regelmäßig deine IP-Adresse über Websites wie ipleak.net oder dnsleaktest.com
+
+
+#######################################################  WebRTC in anderen Anwendungen
+
+WebRTC-Leaks können nicht nur in Webbrowsern, sondern auch in anderen Desktop- oder Mobil-Anwendungen auftreten, die WebRTC verwenden (z.B. Skype, Zoom, Discord). Auch hier könnte deine IP-Adresse offengelegt werden.
+
+Vermeidung: 
+Deaktiviere WebRTC oder verwende Anwendungen, die WebRTC nicht nutzen oder in denen du die IP-Leak-Einstellungen kontrollieren kannst.
+
+
+#######################################################  Malware und Tracking-Software
+
+Malware, Adware oder Tracking-Software auf deinem Gerät kann deine IP-Adresse unabhängig vom VPN sammeln und weiterleiten.
+
+Vermeidung: 
+Stelle sicher, dass dein Gerät frei von Malware ist.
+
+
+#######################################################  QoS (Quality of Service) & Deep Packet Inspection (DPI)
+
+Einige ISPs oder Netzwerkadministratoren setzen DPI-Technologien ein, um den Netzwerkverkehr zu analysieren und möglicherweise die VPN-Verbindung zu identifizieren und zu entschlüsseln, wodurch deine IP-Adresse trotzdem sichtbar wird.
+
+Vermeidung: 
+Verwende einen VPN-Provider, der verschleierte Verbindungen oder DPI-Resistenz bietet (z.B. Obfsproxy, Stunnel).
+
+
+#######################################################
+#######################################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

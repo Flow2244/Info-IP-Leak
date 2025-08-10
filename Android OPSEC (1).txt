@@ -1,0 +1,149 @@
+
+
+
+
+Flugzeugmodus
+
+IMEI, Smartphone, Sim-Karte | Frage
+MAC-Adresse | IMEI
+
+Orbot (Vermittlung mit Tor)
+NetTraffic Android | OPSEC Apps
+Smartphone als Hotspot ein Risiko ?
+
+Port 53 offen | lokaler Port-Scan
+Neuinstallation | auf Werkseinstellungen zurücksetzen | Inplace-Upgrade 
+Alle 1-3 Monate OS neu installieren
+
+
+
+
+#####################################################################
+#####################################################################  Flugzeugmodus
+
+Selbst wenn der Flugzeugmodus aktiviert (schaltet Mobilfunk, WLAN und Bluetooth aus), 
+können Apps den GPS-Standort speichern und übertragen, sobald wieder eine Internetverbindung ist. 
+
+GPS-Modul (Global Positioning System) funktioniert auch im Flugzeugmodus. 
+
+Ausschalten des Geräts ist die sicherste Methode, um dies zu verhindern.
+
+
+
+####################################################
+####################################################  IMEI, Smartphone, Sim-Karte | Frage
+
+-------------------------------- Frage
+Wird die IMEI beim Provider gespeichert? Also wenn die Simkarte getauscht wird und eine IMEI (bzw ein Gerät beobachtet wird) dann scheint das auf?
+Dann könnte theoretisch auch ein gestohlenes Smartphone wieder geortet werden, sobald irgendwer eine Simkarte reintut?
+
+-------------------------------- Antwort
+Korrekt, genauso bekommen die Leute mit gecardeten iPhones dann besuch
+
+Ja. In den USA wird das sogar gemacht. Hier in Deutschland weigern sich die Provider solche Sperren zu verhängen. Ein in den USA gestohlenes Gerät wird auf Antrag des Inhabers IMEI blacklisted in öffentlichen Datenbanken... damit bekommst du nie wieder Netzzugang innerhalb der USA, egal mit welcher SIM-Karte und auch offizielle Shops werden keine Reparaturen an dem Gerät durchführen.
+
+
+############################################################  MAC-Adresse | IMEI
+
+MAC-Adresse	[für lokales Netzwerk]
+IMEI		[für Online-Identifikation; nur für Mobilfunkgeräte]
+
+
+MAC-Adresse:
+Für Kommunikation im lokalen Netzwerk und zur Zuweisung von IP-Adressen.
+Für die Netzwerkidentifikation innerhalb eines lokalen Netzwerks (z.B. WLAN) 
+ist für die Online-Identifikation über das Internet in der Regel nicht relevant. 
+
+IMEI 
+Ist für Mobilfunkgeräte [Smartphones & Tablets] relevant, die mit Mobilfunknetzen kommunizieren.  
+Entscheidend für die Online-Identifikation (für Authentifizierung).
+
+
+-------------------------------------- Wo eine IMEI - Adresse?
+
+Ein PC hat keine IMEI-Nummer, 
+Wenn über WLAN oder Kabel mit dem Internet verbunden ist, hat eine MAC-Adresse für die Netzwerkverbindung. 
+
+Ein gewöhnlicher Router hat keine IMEI-Nummer.
+
+Router mit SIM-Kartensteckplatz (z. B. 4G/5G-Router) haben eine IMEI-Nummer, da sie eine Mobilfunkverbindung nutzen und die IMEI zur Authentifizierung im Mobilfunknetz erforderlich ist.
+
+UMTS-Stick (auch bekannt als USB-Mobilfunkstick oder 3G/4G-Modem) hat eine IMEI-Nummer, da er in der Regel mit einem Mobilfunknetz kommuniziert. 
+
+
+
+############################################################
+############################################################  Orbot (Vermittlung mit Tor)
+
+Ermöglicht das Tor-Netzwerk zu nutzen & leitet den Internetverkehr über mehrere Server.
+
+Ist ein Proxy (Tor-Proxy); ähnlich wie ein VPN.
+Je nach Konfiguration: bestimmte Apps oder das gesamte Gerät wird getunnelt.
+
+Internetverbindung wird über mehrere Tor-Server verschlüsselt.
+
+
+############################################################  NetTraffic Android | OPSEC Apps
+
+GlassWire
+NetGuard
+
+KeePass App
+
+AppLock: 
+Passwörter, PINs oder Fingerabdruck-Authentifizierung für einzelne Apps auf deinem Smartphone einrichten. 
+
+Crypt4All Lite (AES):
+Verschlüsseln von Dateien auf Android-Geräten. Sie verwendet den AES-Standard (Advanced Encryption Standard)
+
+
+
+############################################################  Smartphone als Hotspot ein Risiko ?
+
+Es ist unwahrscheinlich, dass dein Smartphone als Hotspot direkt infiziert wird, wenn nur über den PC eine Webseite aufgerufen wird. 
+Das Smartphone agiert als Datenweiterleitungspunkt und verarbeitet den Traffic nicht aktiv.
+
+
+
+#####################################################################
+#####################################################################  Port 53 offen | lokaler Port-Scan
+
+Port 53 ist für das Domain Name System (DNS) zuständig. 
+Wenn den Hotspot über das Smartphone macht und ein lokaler Port-Scan zeigt, dass Port 53 offen ist, bedeutet das, dass das Smartphone als DNS-Server für die verbundenen Geräte arbeitet.
+
+Das Smartphone stellt ein lokales Netzwerk bereit und muss DNS-Anfragen der verbundenen Geräte weiterleiten, damit diese auf Webseiten zugreifen können.
+
+Einige Mobilfunkanbieter erzwingen die Nutzung ihres eigenen DNS-Servers, selbst wenn du manuell einen anderen DNS-Server auf deinem Gerät konfigurierst.
+
+
+
+
+
+############################################################
+############################################################  Neuinstallation | auf Werkseinstellungen zurücksetzen | Inplace-Upgrade 
+
+Neuinstallation: 
+Ist der sicherste Weg, um den PC von Schadsoftware zu befreien.
+
+Werkseinstellungen zurücksetzen: 
+Entfernt aber oft keine tiefgehende Malware. Einige Probleme oder Schadsoftware könnten zurückbleiben, da nicht immer alle Systembereiche vollständig gelöscht werden.
+
+Inplace-Upgrade: 
+Kann helfen, das System zu reparieren und einige Probleme zu beheben, entfernt jedoch möglicherweise nicht alle Schadprogramme.
+
+
+############################################################  Alle 1-3 Monate OS neu installieren
+
+Wenn du im Bereich Offensive Security tätig bist und auch auf betrügerischen Webseiten unterwegs bist, ist es ratsam, dein System regelmäßig neu aufzusetzen. Empfohlene Intervalle:
+Alle 1-3 Monate: Um sicherzustellen, dass keine Spuren oder potenzielle Malware verbleiben.
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,223 @@
+
+
+
+
+
+
+
+
+Brave, zusätzliche Erweiterung für WebRTC-Schutz ?
+Brave Optionen zum WebRTC-Schutz
+--  Aktuelle WebRTC-Option in Brave (Stand 2025)
+--  Was bedeutet das?
+--  Was du tun solltest
+--  Test (optional)
+
+Symbol mit dem Puzzlestück (🧩) in Brave 
+Puzzle-Symbol (🧩)  |  Bedeutet das, dass WebRTC deaktiviert ist?
+--  Was du tun kannst
+--  Optional
+--  Fazit
+
+WebRTC-Optionen [BraveBrowser] im Überblick – von unsicher bis sicher:
+--  1. Voreingestellte öffentliche und private Benutzerschnittstellen
+--  2. Nur die voreingestellte öffentliche Benutzerschnittstelle
+--  3. Nicht-proxisiertes UDP deaktivieren
+
+
+Was macht die Option „Nicht-proxisiertes UDP deaktivieren“?
+WebRTC blockiert, Videoanrufe sind weiterhin möglich
+
+
+
+
+
+
+
+
+
+###########################################  Brave, zusätzliche Erweiterung für WebRTC-Schutz ?
+
+In vielen Fällen brauchst du keine Erweiterung zusätzlich, weil Brave mit
+„Nicht-proxisiertes UDP deaktivieren“ bereits zuverlässig schützt
+
+
+
+###########################################  Brave Optionen zum WebRTC-Schutz
+
+
+Die WebRTC-Option in Brave hat sich verändert. Die ältere Einstellung „Verhindern, dass IP-Adressen über WebRTC weitergegeben werden“ wurde durch eine neue Formulierung ersetzt. Ich erkläre dir, was du jetzt siehst und was du tun kannst:
+
+
+----------------------
+----------------------  Aktuelle WebRTC-Option in Brave (Stand 2025)
+
+Pfad:
+Einstellungen → Sicherheit und Datenschutz → Sicherheit
+Dann runterscrollen zu: „WebRTC-IP-Nutzungsrichtlinien“
+
+Du siehst dort jetzt:
+Nicht-proxisiertes UDP deaktivieren
+(Deaktiviert die Nutzung von UDP außerhalb von Proxies für WebRTC)
+
+
+----------------------
+----------------------  Was bedeutet das?
+
+Diese Option entspricht der alten Einstellung „Verhindern, dass IP-Adressen über WebRTC weitergegeben werden“.
+Wenn du „Nicht-proxisiertes UDP deaktivieren“ aktivierst, verhindert Brave:
+
+	Dass deine lokale IP-Adresse über WebRTC an Webseiten „leakt“
+	Dass WebRTC direkt deine echte IP zeigt, selbst bei Nutzung eines VPNs oder Proxys
+
+
+Du kannst hier also nicht mehr mehrere Optionen auswählen, wie früher – es gibt nur noch diesen simplen Schalter. Das ist aber ausreichend für Datenschutz gegen WebRTC-Leaks.
+
+
+----------------------
+----------------------  Was du tun solltest:
+
+Aktiviere die Option: „Nicht-proxisiertes UDP deaktivieren“
+Das reicht aus, um dich vor typischen WebRTC-Leaks zu schützen, z.B. bei VPN-Nutzung
+
+Für die meisten Nutzer ist die Brave-Option absolut ausreichend.
+
+
+----------------------  Test (optional):
+
+Du kannst auf einer Seite wie browserleaks.com/webrtc prüfen, ob deine echte IP noch sichtbar ist. Wenn dort nur deine VPN-IP (oder keine IP) angezeigt wird, bist du gut geschützt.
+
+
+
+###########################################
+###########################################  Symbol mit dem Puzzlestück (🧩) in Brave 
+
+
+Diese Einstellung wird durch eine Erweiterung (Extension) verwaltet oder beeinflusst.
+
+Was das konkret heißt:
+Nicht, dass WebRTC vollständig deaktiviert ist.
+Sondern: Eine installierte Erweiterung (z.B. „WebRTC Control“ oder eine VPN-Extension) hat bereits Einfluss auf die WebRTC-IP-Richtlinie genommen.
+
+
+-------------------------------------------
+
+Puzzle-Symbol (🧩) neben der WebRTC-IP-Nutzungsrichtlinie bedeutet nicht, dass WebRTC deaktiviert ist, 
+sondern, dass eine Erweiterung (Extension) Einstellungen in diesem Bereich beeinflusst oder überschreibt.
+
+In deinem Fall bedeutet das:
+Eine installierte Erweiterung (z.B. WebRTC Control, uBlock Origin, ScriptSafe o.ä.) verändert oder verwaltet die WebRTC-Einstellungen
+
+Brave zeigt deshalb das Symbol an, um dich darauf hinzuweisen, dass die aktuelle Einstellung möglicherweise nicht aus den normalen Brave-Optionen stammt, sondern von einer Erweiterung gesetzt oder blockiert wird.
+
+
+
+###########################################  Puzzle-Symbol (🧩)  |  Bedeutet das, dass WebRTC deaktiviert ist?
+
+
+Nicht automatisch!
+Es bedeutet nur, dass eine Erweiterung eingreift. Ob WebRTC tatsächlich blockiert oder deaktiviert ist, 
+hängt davon ab, was diese Erweiterung genau tut.
+
+
+-------------  Was du tun kannst:
+Gehe zu brave://extensions
+→ Schau, welche Erweiterungen aktiv sind
+→ Deaktiviere testweise die, die WebRTC beeinflussen könnten
+
+Danach geh zurück zu Einstellungen → Sicherheit → WebRTC
+→ Schau, ob das Symbol 🧩 verschwindet
+
+
+-------------  Optional: 
+
+Teste WebRTC-Leak auf https://browserleaks.com/webrtc
+
+
+-------------  Fazit:
+
+Das Puzzle-Symbol heißt: „Eine Erweiterung beeinflusst diese Einstellung“, nicht „WebRTC ist deaktiviert“
+„Nicht-proxisiertes UDP deaktivieren“ ist die richtige Einstellung in Brave zum Schutz vor IP-Leaks.
+Zusätzliche Erweiterungen können hilfreich sein, sind aber oft nicht nötig.
+
+
+###########################################
+###########################################  
+
+###########################################
+###########################################  Optionen [BraveBrowser] im Überblick – von unsicher bis sicher:
+
+
+
+Schutz vor WebRTC-IP-Leaks, besonders bei der Nutzung von VPNs oder Proxies.
+Welche WebRTC-Einstellung bietet den besten Datenschutz?
+
+
+----------
+----------  1. Voreingestellte öffentliche und private Benutzerschnittstellen
+
+→ Am wenigsten sicher
+Zeigt lokale und öffentliche IP-Adressen an
+Kann zu WebRTC-Leaks führen, auch wenn du ein VPN nutzt
+
+
+----------
+----------  2. Nur die voreingestellte öffentliche Benutzerschnittstelle
+
+→ Besser, aber nicht optimal
+Gibt nur öffentliche IP weiter
+Kann trotzdem unter bestimmten Umständen die echte IP enthüllen, je nach VPN-Konfiguration
+
+
+----------
+----------  3. Nicht-proxisiertes UDP deaktivieren
+
+→  Beste Option für Datenschutz
+Blockiert nicht-proxisierten WebRTC-Verkehr
+Verhindert, dass deine echte IP-Adresse (lokal oder öffentlich) an Webseiten „geleakt“ wird
+Funktioniert sehr gut in Kombination mit einem VPN
+
+
+-------------------
+-------------------
+
+Empfehlung:
+Wähle „Nicht-proxisiertes UDP deaktivieren“ –
+das ist die sicherste Einstellung gegen WebRTC-Leaks in Brave.
+
+
+Bonus-Tipp:
+Nach dem Umstellen kannst du deinen Schutz hier testen:
+https://browserleaks.com/webrtc
+Wenn dort nur deine VPN-IP oder gar keine IP angezeigt wird, bist du auf der sicheren Seite.
+
+
+
+###########################################   Was macht die Option „Nicht-proxisiertes UDP deaktivieren“?
+
+Verhindert, dass WebRTC UDP-Daten direkt sendet, umgeht damit die echte IP
+Zwingt WebRTC, nur über den Proxy/VPN zu laufen (wenn überhaupt)
+Das verhindert Leaks, da keine direkten Netzwerkverbindungen mehr außerhalb des Tunnels aufgebaut werden.
+
+
+
+###########################################  WebRTC blockiert, Videoanrufe sind weiterhin möglich
+
+WebRTC (Web Real-Time Communication) ermöglicht z.B. Videoanrufe direkt im Browser – ohne Plugin.
+
+Videoanrufe sind weiterhin möglich, aber:
+
+	Sie könnten langsamer starten
+	Oder über einen Relay-Server (TURN) laufen, nicht direkt (P2P)
+	In manchen Fällen (z. B. bei bestimmten Webdiensten) könnte es nicht funktionieren, wenn keine direkte Verbindung möglich ist
+
+Für die meisten gängigen Dienste (wie Jitsi, Google Meet, Teams) funktioniert es aber trotzdem – nur nicht ganz so effizient.
+
+
+###########################################
+###########################################
+
+
+
+
+

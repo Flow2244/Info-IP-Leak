@@ -1,0 +1,50 @@
+
+
+
+
+
+Internetprovider kann NAT (Network Address Translation) verwenden,
+also dieselbe öffentliche IP-Adresse für mehrere Benutzer. 
+
+
+
+
+###########################################################
+###########################################################  IP Adresse, Provider verwendet NAT ?
+
+
+Test in der Eingabeaufforderung (cmd) oder Powerhsell:
+
+tracert google.com   # Für Windows
+traceroute google.com   # Für Linux/macOS
+
+
+Hinweise darauf, dass der Provider NAT verwendet:
+1) Wenn in den Ergebnissen des Traceroutes private IP-Adressen (z.B. 192.168.x.x, 10.x.x.x) oder 
+2) Die gleiche IP-Adresse an mehreren Stellen siehst, [weist auf eine gemeinsame Nutzung von öffentlichen IPs durch mehrere Nutzer hin], 
+3) Wenn du auf den letzten Hops private IP-Adressen siehst 
+
+4) Wenn du mehrere Geräte hinter dem gleichen Router hast, aber mit der gleichen öffentlichen IP im Internet erscheinst, deutet das auf NAT hin.
+
+
+
+#################---------------------------------------#################
+#################---------------------------------------#################
+#################---------------------------------------#################  
+
+
+
+Carrier-grade NAT (CGNAT)
+
+Wenn dein Provider CGNAT verwendet, bedeutet das, dass mehrere Kunden die gleiche öffentliche IP-Adresse teilen und der Provider die NAT-Funktion verwendet.
+
+
+
+###########################################################
+###########################################################
+
+
+
+
+
+

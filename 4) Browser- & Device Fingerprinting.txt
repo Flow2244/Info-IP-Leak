@@ -1,0 +1,128 @@
+
+
+
+Browser & Device Fingerprinting: 
+Sammeln von Informationen über das Gerät;
+Methoden, die einen einzigartigen Fingerabdruck erzeugen, und schwer zu fälschen oder zu ändern sind.
+
+
+
+##  WebGL-Browserbericht
+##  Canvas Fingerprinting
+##  JavaScript Browser Information
+##  Fingerabdruck der Schriftart
+##  Geolocation API
+##  Features Detection (Funktionserkennung)
+##  SSL/TLS Client Test
+##  Content Filters & Proxy Detection 
+
+##  Kritik an Erweiterungen
+
+
+
+Der Fingerprint wird durch die Webseite erzeugt, indem Informationen zum Browser und andere Geräteparameter identifiziert werden.
+
+Der Internetprovider kann bestimmte Informationen über die Verbindung und den Traffic sammeln, aber er hat normalerweise keinen direkten Zugriff auf den spezifischen Fingerprint eines PCs oder Laptops, es sei denn, es werden zusätzliche Daten über die Verbindung erfasst. 
+
+
+#################---------------------------------------#################
+#################---------------------------------------#################
+#################---------------------------------------#################  
+
+
+
+###########################################################
+###########################################################  WebGL-Browserbericht
+
+Auf diese Weise können Websites detaillierte Informationen über die Grafikkarte sammeln, mit denen ein eindeutiger Browser-Fingerabdruck erstellt werden kann. WebGL ist eine JavaScript-API, mit der 3D-Grafiken in einem Webbrowser mithilfe der GPU des Geräts gerendert werden. 
+
+Dieses Tool enthüllt Informationen zu Ihrer Grafikkarte und anderen WebGL- und GPU-Funktionen, mit denen Sie Ihren Browser von anderen unterscheiden können.
+
+-----------------------------------------------------------
+
+WebGL in Chrome
+Starten Sie das Programm mit einer dieser Befehlszeilenoptionen, um WebGL in Chrome zu deaktivieren:
+--disable-webgl   oder   --disable-3d-apis
+
+Dies gilt für alle Chromium-basierten Webbrowser 
+(Brave Browser ist Chromium-basiert).
+
+
+
+###########################################################
+###########################################################  Canvas Fingerprinting
+
+Die Canvas-API, mit der Grafiken über JavaScript und HTML gezeichnet werden können, kann auch für Browser-Fingerabdrücke verwendet werden. 
+
+Diese Technik basiert auf Variationen in der Art und Weise, wie Canvas Bilder auf verschiedenen Webbrowsern und Plattformen gerendert werden, um einen digitalen Fingerabdruck des Browsers zu erstellen.
+
+Eine als Canvas Fingerprinting bekannte Tracking-Methode verwendet HTML5 Canvas-Code, um eine eindeutige Kennung zu generieren. Die Methode basiert auf der Tatsache, dass die durch Canvas-Code generierten eindeutigen Pixel je nach verwendetem System und Browser variieren können.
+
+
+
+###########################################################
+###########################################################  JavaScript Browser Information
+
+Vielzahl von Daten über das System des Benutzers extrahieren. Dies umfasst Informationen wie User-Agent, Bildschirmauflösung, Systemsprache, Ortszeit, CPU-Architektur, Anzahl der logischen Kerne, Batteriestatus, Netzwerkinformationen, installierte Plugins und mehr.
+
+
+
+###########################################################
+###########################################################  Fingerabdruck der Schriftart
+ 
+Der Fingerabdruck von Schriftarten ist eine Technik, mit der Online-Aktivitäten durch Analyse der Eigenschaften der Systemschriftarten verfolgt werden. Durch Messen der Abmessungen von Text oder einzelnen Unicode-Glyphen, Aufzählen von Schriftarten und Finden von Rendering-Unterschieden kann diese Methode einen einzigartigen Fingerabdruck erzeugen, der schwer zu fälschen oder zu ändern ist.
+
+
+
+###########################################################
+###########################################################  Geolocation API
+
+HTML5-Geolokalisierung wird von Ihrem Browser bereitgestellt und umfasst die HTML5-Geolokalisierungs-API. Im Wesentlichen handelt es sich um ein in Ihren Webbrowser integriertes Tool, das das GPS Ihres Geräts oder andere Quellen verwendet, um Ihre Breiten- und Längengradkoordinaten zu erkennen.
+
+
+
+###########################################################
+###########################################################  Features Detection (Funktionserkennung)
+
+Das Features Detection Tool bietet Webbrowser-Feature-Tests, die sich auf die Online-Identität beziehen, wenn Sie sie in Ihren Browsereinstellungen aktivieren oder deaktivieren.
+
+
+
+###########################################################
+###########################################################  SSL/TLS Client Test
+
+SSL / TLS-Funktionen des Webbrowsers können angezeigt werden, einschließlich der unterstützten TLS-Protokolle, Chiffresuiten, Erweiterungen und Schlüsselaustauschgruppen. 
+Es kann ein Fingerabdruck generiert werden. 
+
+
+
+###########################################################
+###########################################################  Content Filters & Proxy Detection  
+
+Inhaltsfilter (zB.AdGuard, Dark Reader), Proxy- und VPN- Erkennung 
+
+
+
+#################---------------------------------------#################
+#################---------------------------------------#################
+#################---------------------------------------#################  
+
+
+
+###########################################################
+###########################################################  Kritik an Erweiterungen
+
+Inhaltsfilter und Add-ons, die eigentlich dazu dienen sollen, Fingerprinting zu verhindern (z.B. durch Blockieren von Tracking-Skripten oder das Maskieren von Geräteninformationen), können das Gegenteil bewirken.
+
+Einige dieser Erweiterungen verändern oder fügen zusätzliche Informationen hinzu, und dadurch kann das Fingerprinting sogar verstärkt werden, statt es zu verhindern. 
+Beispielsweise könnte das Installieren einer beliebten Erweiterung dazu führen, dass eine Website den Browsertyp oder andere Merkmale der Installation identifiziert, was die Anonymität beeinträchtigen könnte.
+
+
+###########################################################
+###########################################################
+
+
+
+
+
+

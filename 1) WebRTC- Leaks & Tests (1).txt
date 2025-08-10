@@ -1,0 +1,163 @@
+
+
+
+Was ist WebRTC?
+Webseiten zum testen
+Deaktivieren von WebRTC
+
+
+WebRTC Control - Erweiterung
+Erweiterungen
+Device- & Browser- Fingerprinting
+
+Captcha, Datenschutz?
+
+
+
+######################################
+######################################
+
+Auch wenn du ein VPN oder Proxy verwendest,  
+WebRTC kann deine IP-Adresse leaken.
+
+WebRTC verwendet mehrere Wege, um die IP-Adresse eines Benutzers zu ermitteln.
+
+
+
+######################################
+######################################  WebRTC 
+
+
+WebRTC (Web Real-Time Communication):
+Webbrowser und Apps können in Echtzeit kommunizieren. Ermöglicht Videokonferenzen, Sprachanrufe und Peer-to-Peer-Dateifreigabe, ohne dass Plugins erforderlich sind oder zusätzliche Software.
+
+Es ist standardmäßig in gängigen Browsern wie Chrome, Firefox und Safari aktiviert.
+
+
+
+######################################
+######################################  WebRTC-Leak testen
+
+
+WebRTC-Leak: deine IP-Adresse wird anzeigt und nicht die vom VPN.
+
+WebRTC-Leak-Testseiten:
+	https://browserleaks.com/webrtc
+	https://www.doileak.com
+	https://www.ipleak.net
+
+
+
+######################################
+######################################  Deaktivieren von WebRTC
+
+WebRTC-Lecks sind in erster Linie ein Browserproblem. 
+
+Firefox: 
+URL: >about:config<  ; setze den Wert von media.peerconnection.enabled auf false.
+
+Chrome: 
+In der alten Version in den Einstellungen deaktivieren, 
+in neueren Versionen Erweiterung installieren wie WebRTC Control, WebRTC Leak Prevent ...
+
+
+
+
+######################################
+######################################  WebRTC Control - Erweiterung
+
+WebRTC Control: Erweiterung für WebRTC Leak Schutz
+
+Erweiterungen wie: Privacy Badger, NoScript, uBlock Origin, 
+sind kein Schutz gegen WebRTC-Leaks  oder  (Device- & Browser-) Fingerprinting.
+blockieren nicht die Daten, die dafür verwendet werden.
+
+Die Erweiterung WebRTC Control kann WebRTC-Leaks begrenzen, aber sie schützt nicht vor DNS-Leaks über IPv6.
+(siehe nächstes InfoBlatt)
+
+
+######################################
+######################################  Erweiterungen
+
+------------------------------------
+
+Privacy Badger:
+blockiert Tracking und Werbung, 
+aber nicht GPU-Fingerprinting oder Browser-Fingerprinting.
+
+------------------------------------
+
+uBlock Origin:
+Adblocker-Erweiterung (blockiert Werbung und Tracking-Skripte); blockiert Pop-ups 
+
+------------------------------------
+
+NoScript:
+Manuell festlegen, was vertrauenswürdig ist
+Blockiert alles, was Skripte betrifft (JavaScript, Java, Flash …)
+
+Viele Webseiten funktionieren nicht richtig ohne JavaScript
+Einige Fingerprinting-Techniken werden eingeschränkt 
+
+------------------------------------
+
+CanvasBlocker: 
+schützt vor Canvas-Fingerprinting, 
+nicht vor Techniken wie GPU-Fingerprinting oder Browser-Fingerprinting. 
+
+
+######################################
+######################################  Device- & Browser- Fingerprinting
+
+Selbst wenn Cookies oder andere Tracking-Mechanismen blockiert sind,
+kann eine Hash-ID des Gerätes oder Browsers erstellt werden.
+
+Tor Browser:  
+speziell darauf ausgelegt, Fingerprinting zu erschweren
+
+
+
+######################################
+######################################  Captcha, Datenschutz?
+
+Captcha selbst leakt normal nicht direkt die IP-Adresse,
+kann aber zusätzliche Tracking-Technologien nutzen (WebRTC...)
+->  WebRTC im Browser deaktivieren
+
+------------------------------------
+
+Google reCAPTCHA : 
+Sammelt Daten wie IP-Adresse, Browser- und Geräteinformationen, Cookies, 
+Verhalten auf der Webseite (wie Mausbewegungen oder Klicks). 
+Da auf vielen Webseiten verwendet wird, kann Cross-Site-Tracking ermöglichen und zu Verhaltensanalyse & Profilbildung verwendet werden.
+
+hCaptcha:  
+bieten oft bessere Datenschutzrichtlinien
+
+
+------------------------------------
+
+Tor-Browser: 
+blockiert Tracking und bietet Anonymität, wenn du Captchas lösen musst.
+
+Brave Browser: 
+Blockiert viele Arten von Tracking und Werbung, 
+hat eingebaute Schutzmechanismen gegen viele Captcha-Tracker
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

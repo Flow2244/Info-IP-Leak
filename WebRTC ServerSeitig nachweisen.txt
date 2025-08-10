@@ -1,0 +1,96 @@
+
+
+Serverseitig nachweisen
+Tools zum Scannen von WebRTC-Leaks
+WebRTC-spezifische Protokolle
+
+
+
+#################---------------------------------------#################
+#################---------------------------------------#################
+#################---------------------------------------#################  Serverseitig nachweisen
+dass eine WebRTC Verbindung initiiert wird mit Burp Suite... 
+
+
+WebRTC verwendet mehrere Wege, um die öffentliche IP-Adresse eines Benutzers zu ermitteln.
+
+Nicht immer sofort ersichtlich, schon probiert mit den Tools...
+OWASP ZAP (Zed Attack Proxy)
+Burp Suite (Community Edition)
+
+Burp Suite kann den Verkehr zum Signalserver überwachen, aber WebRTC-Verkehr zu STUN/TURN-Servern und die direkte Peer-to-Peer-Verbindung sind schwierig zu erkennen, da sie häufig über WebSockets oder andere Protokolle laufen, die nicht direkt über HTTP oder HTTPS zugänglich sind.
+
+
+
+
+#################---------------------------------------#################
+#################---------------------------------------#################
+#################---------------------------------------#################  Tools zum Scannen von WebRTC-Leaks
+
+
+Qualys (kostenpflichtig) oder andere Sicherheits-Scanning-Dienste, die speziell nach WebRTC-Implementierungen suchen. 
+Solche Tools scannen Webseiten auf WebRTC-spezifische Bibliotheken und Implementierungen.
+
+
+##################################################################
+
+Wenn du Zugang zum Server hast, 
+kannst du die Logs auf Verbindungen und Signalisierungsnachrichten untersuchen, die durch WebRTC-Interaktionen generiert wurden. Server, die WebRTC implementieren, könnten Verbindungsdaten (einschließlich IP-Adressen) in ihren Logs protokollieren, wenn sie über Signalisierungsserver laufen.
+
+
+
+
+#################---------------------------------------#################
+#################---------------------------------------#################
+#################---------------------------------------#################  WebRTC-spezifische Protokolle
+
+
+Du kannst Entwicklerwerkzeuge oder Netzwerktools (Wireshark oder Fiddler) verwenden, 
+um zu überprüfen, ob WebRTC-Anfragen gesendet werden, die deine wahre IP-Adresse preisgeben.
+
+
+##################################################################
+Test 1; Beispiel, Console:
+
+
+RTCPeerConnection = window.RTCPeerConnection || window.mozRTCPeerConnection || window.webkitRTCPeerConnection;
+
+ƒ RTCPeerConnection() { [native code] }
+
+
+Die Ausgabe ƒ RTCPeerConnection() { [native code] } bedeutet, 
+dass die RTCPeerConnection-API im Browser verfügbar ist und die Funktion intern implementiert ist. Mit anderen Worten, der Browser unterstützt WebRTC und stellt die RTCPeerConnection-Funktion zur Verfügung.
+
+Webseiten, die WebRTC verwenden, können deine IP-Adresse durchleaken.
+
+
+##################################################################
+Test 2; Netzwerk-Tab:
+
+
+Öffne die Entwicklerwerkzeuge im Browser,
+gehe zum Netzwerk-Tab und lade die Webseite neu.
+Schau dir die Antworten des Webservers auf diese Anfragen an. 
+
+Du musst nichts in die Konsole eintippen.
+Gehe zum Netzwerk-Tab.
+Achte auf Verbindungen, die WebRTC betreffen. 
+Diese können WebSocket-Verbindungen oder HTTP-Anfragen sein, die mit WebRTC-Signalisierung zu tun haben 
+(z.B. Nachrichten mit den Begriffen offer, answer, oder candidate).
+
+
+##################################################################
+Test 3; Beispiel, Console:
+
+
+var pc = new RTCPeerConnection();
+pc.createDataChannel("test");
+pc.createOffer().then(offer => pc.setLocalDescription(offer));
+
+Dieser Code startet die WebRTC-Verbindung und zeigt, ob WebRTC von deinem Browser oder der Webseite verwendet wird.
+Gehe dann zu einer Testseite wie browserleaks.com/webrtc, um zu prüfen, ob deine IP-Adresse geleakt wird.
+
+
+
+
+
